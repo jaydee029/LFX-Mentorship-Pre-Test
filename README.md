@@ -1,6 +1,11 @@
 # LFX-Mentorship-Pre-Test
 ## Applying for 'Integrate whisper.cpp as a new WASI-NN backend' [#3170](https://github.com/WasmEdge/WasmEdge/issues/3169)
 
+### System configuration
+```
+Ubuntu 20.04 Linux Distribution (64_86 architecture)
+```
+
 ### Whisper.cpp execution
 Whisper.cpp is c/c++ port of OpenAI's whisper AI model, which helps in transcription of any audio.It offers multi-speaker and multi language support.
 whisper.cpp is a light weight inference which allows easy integration in various applications.
@@ -15,17 +20,28 @@ bash ./models/download-ggml-model.sh base.en
 make base.en
 ```
 In the above commands `base.en` was installed and built.
+
+Here is the basic menu printed after installation.
+
+![whis1](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/whis1.jpg)
+
+Now we translate one of the audio samples provided [here](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/files/jfk.wav) in the .wav format. Along with that we have enabled `-pc` which enables colored transcription and `-pp` which prints transcription progress.
+The following command was used, `-f` symbolises that a file is being provided for transcription.
 ```
 ./main -f samples/jfk.wav -pp -pc
 ```
+![whis2](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/whis2.jpg)
 
+The above image shows the transcription of the audio file along with the timestamps, and progress percentage.
+
+Next I have used an audio sample recorded in my voice [here](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/files/Recording_2.wav). In the below commands we use an extra argument `-oj` which saves the transcription in json format.
 ```
 ./main -f samples/Recording_2.wav -pc -oj
 ```
-### System configuration
-```
-Ubuntu 20.04 Linux Distribution (64_86 architecture)
-```
+![whis3](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/whis3.jpg)
+
+The above image shows transcription of the audio , along with the timestamps. The save json file can be seen [here](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/files/Recording_2.wav.json).
+
 ### Building WASMEDGE
 The following branch was used [hydai/0.13.5_ggml_lts](https://github.com/WasmEdge/WasmEdge/tree/hydai/0.13.5_ggml_lts)
 
