@@ -1,6 +1,15 @@
 # LFX-Mentorship-Pre-Test
 ## Applying for 'Integrate whisper.cpp as a new WASI-NN backend' [#3170](https://github.com/WasmEdge/WasmEdge/issues/3169)
 
+## Table of Contents
+- [Profile Information](#Profile-Information)
+- [System configuration](#System-configuration)
+- [Whisper.cpp execution](#Whisper.cpp-execution)
+- [Building WASMEDGE](#Building-WASMEDGE)
+- [Building a WASM example](#Building-a-WASM-example)
+- [Building using WebUI](#Building-using-WebUI)
+
+
 ### Profile Information
 Name: Dhruv Jain
 
