@@ -1,6 +1,10 @@
 # LFX-Mentorship-Pre-Test
 ## Applying for 'Integrate whisper.cpp as a new WASI-NN backend' [#3170](https://github.com/WasmEdge/WasmEdge/issues/3169)
 
+### Profile Information
+Name: Dhruv Jain
+Email: dhruvj797@gmail.com
+
 ### System configuration
 ```
 Ubuntu 20.04 Linux Distribution (64_86 architecture)
