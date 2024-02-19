@@ -25,11 +25,13 @@ cmake --install build
 ```
 
 ![wasm1](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm1.jpg)
+
 ### Building a WASM example
 In this example we are building a chat server which uses one of the llama models , the model can be then interacted with using the cli as well as frontend.
 
 In the following steps the api server file was downloaded , along with a few llama models.For the sake of efficiency a smaller model was used ie **TinyLlama-1.1B-Chat-v1**
 as seen in the log files.
+
 ![wasm2](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm2.jpg)
 ![wasm11](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm11.jpg)
 
@@ -66,6 +68,14 @@ Below is another example of server querying, using the same json format.
 ### Building using WebUI
 The provided web UI template was downloaded on the system using the curl command.The installed file is then extracted.
 ![wasm8](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm8.jpg)
-The web ui is then executed along with the already installed **Tiny llama model**
+The web ui is then executed along with the already installed **Tiny llama model**. We use the following command to do the same
+```
+wasmedge --dir .:. --nn-preload default:GGML:AUTO:TinyLlama-1.1B-Chat-v1.0-GGUF/resolve/main/TinyLlama-1.1B-Chat-v1.0-Q5_K_M.gguf llama-api-server.wasm -p llama-2-chat
+```
 ![wasm9](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm9.jpg)
+
+Once the server is live , we open the `https://localhost:8080` on our local systems to query the wasm-llama server using the web ui.
+
 ![wasm10](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm10.jpg)
+The above process shows building of llama server using a wasm runtime, and was executed succesfully.
+Note: The accuracy of answers depends upon the llama model used which in this case is **TinyLlama-1.1B-Chat-v1**
