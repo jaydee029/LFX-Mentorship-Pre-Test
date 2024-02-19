@@ -36,15 +36,36 @@ as seen in the log files.
 The wasm server was then hosted locally using wasmedge runtime through the following command.
 
 ![wasm3](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm3.jpg)
+
 The `--nn-preload` command in `wasmedge --dir .:. --nn-preload` allows the user to run the preloaded models in the WASINN plugin.
 The server then starts at the default port ie `8080` as seen above.
 
 We open a different terminal after this and start querying the model using a predefined json format.
-
+We use the following command to test the server 
+```
+curl -X POST http://localhost:8080/v1/chat/completions -H 'accept:application/json' -H 'Content-Type: application/json' -d '{"messages":[{"role":"system", "content": "You are a helpful assistant."}, {"role":"user", "content": "What is web assembly?"}], "model":"llama-2-chat"}'
+```
 ![wasm4](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm4.jpg)
+
+The above image shows the response of the question asked, we recieve the answer in a json format , where the system informs us about the token usage, operation performed and other choices made.
+Another operation that we are performing is chat completions, we give the model an incomplete sentence/phrase and it tries to complete it. The following format is used for querying the server.
+```
+curl -X POST http://50.112.58.64:8080/v1/completions \
+    -H 'accept:application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{"prompt":["Long long ago, "], "model":"tinyllama"}'
+ ```
+
 ![wasm5](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm5.jpg)
+
+The above image shows the result of chat completions in a json format.
+Below is another example of server querying, using the same json format.
+
 ![wasm6](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm6.jpg)
-![wasm7](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm7.jpg)
+
+### Building using WebUI
+The provided web UI template was downloaded on the system using the curl command.The installed file is then extracted.
 ![wasm8](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm8.jpg)
+The web ui is then executed along with the already installed **Tiny llama model**
 ![wasm9](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm9.jpg)
 ![wasm10](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/wasm10.jpg)
