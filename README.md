@@ -1,6 +1,27 @@
 # LFX-Mentorship-Pre-Test
 ## Applying for 'Integrate whisper.cpp as a new WASI-NN backend' [#3170](https://github.com/WasmEdge/WasmEdge/issues/3169)
 
+### Whisper.cpp execution
+Whisper.cpp is c/c++ port of OpenAI's whisper AI model, which helps in transcription of any audio.It offers multi-speaker and multi language support.
+whisper.cpp is a light weight inference which allows easy integration in various applications.
+
+First we install whisper.cpp following the basic steps from the project documentation.
+```
+git clone https://github.com/ggerganov/whisper.cpp.git
+```
+We then install one of the available models , then build the model using the following commands
+```
+bash ./models/download-ggml-model.sh base.en
+make base.en
+```
+In the above commands `base.en` was installed and built.
+```
+./main -f samples/jfk.wav -pp -pc
+```
+
+```
+./main -f samples/Recording_2.wav -pc -oj
+```
 ### System configuration
 ```
 Ubuntu 20.04 Linux Distribution (64_86 architecture)
