@@ -4,7 +4,7 @@
 ## Table of Contents
 - [Profile Information](#Profile-Information)
 - [System configuration](#System-configuration)
-- [Whisper.cpp execution](#Whisper.cpp-execution)
+- [Whisper.cpp execution](#Whispercpp-execution)
 - [Building Whisper examples](#Building-Whisper-examples)
 - [Building WASMEDGE](#Building-WASMEDGE)
 - [Building a WASM example](#Building-a-WASM-example)
