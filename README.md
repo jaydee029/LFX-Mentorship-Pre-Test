@@ -5,6 +5,7 @@
 - [Profile Information](#Profile-Information)
 - [System configuration](#System-configuration)
 - [Whisper.cpp execution](#Whisper.cpp-execution)
+- [Building Whisper examples](#Building-Whisper-examples)
 - [Building WASMEDGE](#Building-WASMEDGE)
 - [Building a WASM example](#Building-a-WASM-example)
 - [Building using WebUI](#Building-using-WebUI)
@@ -15,7 +16,10 @@ Name: Dhruv Jain
 
 Email: dhruvj797@gmail.com
 
+The application for LFX mentorship was submitted with a resume,report and a cover letter.
+
 ### System configuration
+A WSL2 system is used on an Intel core windows 11 device.
 ```
 Ubuntu 20.04 Linux Distribution (64_86 architecture)
 ```
@@ -38,6 +42,8 @@ In the above commands `base.en` was installed and built.
 Here is the basic menu printed after installation.
 
 ![whis1](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/images/whis1.jpg)
+
+### Building Whisper examples
 
 Now we translate one of the audio samples provided [here](https://github.com/jaydee029/LFX-Mentorship-Pre-Test/blob/main/files/jfk.wav) in the .wav format. Along with that we have enabled `-pc` which enables colored transcription and `-pp` which prints transcription progress.
 The following command was used, `-f` symbolises that a file is being provided for transcription.
