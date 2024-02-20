@@ -1,5 +1,5 @@
 # LFX-Mentorship-Pre-Test
-## Applying for 'Integrate whisper.cpp as a new WASI-NN backend' [#3170](https://github.com/WasmEdge/WasmEdge/issues/3169)
+## Applying for 'Integrate whisper.cpp as a new WASI-NN backend' [#3170](https://github.com/WasmEdge/WasmEdge/issues/3170)
 
 ## Table of Contents
 - [Profile Information](#Profile-Information)
